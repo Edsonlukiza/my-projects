@@ -1,0 +1,157 @@
+
+:root {
+    --body-bg: hsl(221, 100%, 96%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.left-flex-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: hsl(241, 81%, 54%);
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.right-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+/* Individual Section Styling */
+.reaction {
+    color: hsl(0, 91%, 71%);
+    background-color: hsl(0, 28%, 95%);
+}
+
+.memory {
+    color: hsl(39, 90%, 60%);
+    background-color: hsla(0, 28%, 95%, 0.47);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(162, 60%, 92%, 0.537);
+}
+
+.visual {
+    color: hsla(256, 72%, 46%, 1);
+    background-color: rgba(235, 232, 243, 0.742);
+}
+
+/* Align Icons with Titles */
+.icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures spacing between text and score */
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.icon-text img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-text p {
+    flex: 1;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Button */
+button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 20px;
+    padding: 10px 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/* Circle Score */
+.score-circle {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(256, 72%, 46%, 1);
+    background: radial-gradient(circle at top, hsla(256, 72%, 46%, 1) 60%, hsla(241, 72%, 46%, 0.1) 90%, hsla(241, 72%, 46%, 0) 100%);
+}
+
+.p {
+    color: hsl(241, 100%, 89%);
+}
+
+.icon-text span {
+    font-size: 14px;
+    
+}
+
+.part1 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.614);
+}
+
+.part2 {
+    color: hsl(241, 100%, 89%);
+}
+
+.slash {
+    color: hsla(241, 100%, 89%, 0.947); /* Same color as the numbers */
+}
+
+/* Responsive layout - makes a one-column layout instead of two-column layout */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-flex-container, .right-flex-container {
+        width: 100%;
+    }
+}
